@@ -1,4 +1,5 @@
 import csv
+import os
 
 csv_file = open("./records.csv", "r", encoding="utf_8")
 
@@ -8,7 +9,14 @@ f = csv.reader(csv_file, delimiter=",", doublequote=True, lineterminator="\r\n",
 # f = csv.DictReader(csv_file, delimiter=",", doublequote=True, lineterminator="\r\n", quotechar='"', skipinitialspace=True)
 
 header = next(f)
+i = 1
 for row in f:
-  print(row[3])
+  txt = open('./text/text_' + str(i) + '.txt', 'w')
+  txt.write(row[3])
+  # print(row[3])
+  txt.close
+  i += 1
 
 csv_file.close
+a = os.listdir(path='./text')
+print(a)
