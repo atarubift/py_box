@@ -2,3 +2,5 @@ records.csv
 /tf-idf/
 cos_vec/text
 import_csv/text
+*.txt
+*.csv
