@@ -6,12 +6,12 @@ from sklearn.feature_extraction.text import TfidfTransformer
 import os
 import csv
 
-filenames = sorted(os.listdir(path='./text'))
-print(filenames)
+filenames = sorted(os.listdir(path='./title'))
+# print(filenames)
 wakati_list = []
 for filename in filenames:
   # print(filename)
-  with open("./text/" + filename, mode='r', encoding="utf-8") as f:
+  with open("./title/" + filename, mode='r', encoding="utf-8") as f:
     text = f.read()
   wakati = ''
   t = Tokenizer()
@@ -24,7 +24,7 @@ for filename in filenames:
         if not ',*,' in word:
           wakati  = wakati + word + ' '
   wakati_list.append(wakati)
-  # print(wakati_list)
+  print(wakati_list)
 wakati_list_np = np.array(wakati_list)
 
 vectorizer = TfidfVectorizer(token_pattern=u'\\b\\w+\\b')
@@ -34,6 +34,6 @@ tfidf = transformer.fit_transform(tf)
 tfidf_array = tfidf.toarray()
 cs = cosine_similarity(tfidf_array, tfidf_array)
 np.set_printoptions(threshold=1000)
-with open('results.csv', 'wt') as f:
+with open('results_title.csv', 'wt') as f:
   writer = csv.writer(f)
   writer.writerows(cs)

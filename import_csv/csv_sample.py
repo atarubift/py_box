@@ -11,8 +11,8 @@ f = csv.reader(csv_file, delimiter=",", doublequote=True, lineterminator="\r\n",
 header = next(f)
 i = 1
 for row in f:
-  txt = open('./text/text_' + str(i).zfill(3) + '.txt', 'w')
-  txt.write(row[3])
+  txt = open('./title/title_' + str(i).zfill(3) + '.txt', 'w')
+  txt.write(row[1])
   # print(row[3])
   txt.close
   i += 1
