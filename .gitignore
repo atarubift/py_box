@@ -4,4 +4,4 @@ cos_vec/text
 import_csv/text
 *.txt
 *.csv
-webImage/image
+/webImage/
