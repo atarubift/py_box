@@ -13,6 +13,7 @@ def download_file(url, dst_path):
   except urllib.error.URLError as e:
     print(e)
 
-  url = 'to/image/link'
-  dst_path = 'to/dwnload/filename'
-  download_file(url, dst_path)
+
+url = 'to/image/link'
+dst_path = 'to/dwnload/filename'
+download_file(url, dst_path)
