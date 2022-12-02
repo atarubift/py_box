@@ -1,7 +1,11 @@
 records.csv
 /tf-idf/
-cos_vec/text
-import_csv/text
+cos_vec/
+import_csv/
 *.txt
 *.csv
 webImage/
+find_text/
+mecab/
+import_csv/
+rex/
