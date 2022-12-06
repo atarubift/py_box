@@ -11,3 +11,4 @@ rex/
 geo/
 match_meta/
 euclidean_distance/
+geopy_dis/
