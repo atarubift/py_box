@@ -10,3 +10,4 @@ import_csv/
 rex/
 geo/
 match_meta/
+euclidean_distance/
